@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Login from './Login';
 import './App.css';
 import { getTokenFromUrl } from './Spotify';
@@ -40,9 +40,19 @@ function App() {
           user: user,
         })
       });
+      
+      spotify.getUserPlaylists().then(playlists => {
+        dispatch({
+          type: 'SET_PLAYLISTS',
+          playlists: playlists,
+        })
+      });
+    
     }
 
+
     console.log(`I HAVE TOKEN NOW`, token);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   console.log(user);
