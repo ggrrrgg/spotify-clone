@@ -5,7 +5,7 @@ export const authEndpoint =
 
 const redirectUri = "http://localhost:3000/";
 
-const CLIENTID = 
+const CLIENTID = "bbf12b2020ac4eb1b6bc8668763d95f3"
 
 
 const scopes = [
