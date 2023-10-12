@@ -9,12 +9,24 @@ const CLIENTID = "bbf12b2020ac4eb1b6bc8668763d95f3"
 
 
 const scopes = [
-    "user-read-currently-playing",
+    "user-read-playback-position",
+    "user-read-email",
+    "user-library-modify",
+    "playlist-modify-public",
+    "ugc-image-upload",
+    "user-follow-modify",
+    "user-modify-playback-state",
     "user-read-recently-played",
-    "user-read-playback-state",
+    "user-read-private",
+    "user-library-read",
     "user-top-read",
-    "user-modify-playback-state"
-];
+    "playlist-modify-private",
+    "user-follow-read",
+    "user-read-playback-state",
+    "user-read-currently-playing",
+    "playlist-read-private",
+    "playlist-read-collaborative",
+  ];
 
 export const getTokenFromUrl = () =>{
     return window.location.hash
