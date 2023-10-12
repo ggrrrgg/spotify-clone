@@ -21,7 +21,7 @@ function App() {
     const _token = hash.access_token;
 
     if (_token) {
-      // setToken(_token);
+      spotify.setAccessToken(_token);
 
       dispatch({
         type: 'SET_TOKEN',
@@ -30,7 +30,7 @@ function App() {
 
       
 
-      spotify.setAccessToken(_token);
+      // spotify.setAccessToken(_token);
 
       spotify.getMe().then(user => {
         // console.log(user);
@@ -40,6 +40,13 @@ function App() {
           user: user,
         })
       });
+
+      spotify.getMyTopArtists().then((response) =>
+      dispatch({
+        type: "SET_TOP_ARTISTS",
+        top_artists: response,
+      })
+      );
       
       spotify.getUserPlaylists().then(playlists => {
         dispatch({
