@@ -7,6 +7,7 @@ import { useDataLayerValue } from './DataLayer';
 
 function Header() {
 
+// eslint-disable-next-line no-unused-vars
 const [{user}, dispatch] = useDataLayerValue();
 
   return (

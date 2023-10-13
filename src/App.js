@@ -7,6 +7,7 @@ import Player from './Player';
 import { useDataLayerValue } from './DataLayer';
 
 
+// eslint-disable-next-line new-parens
 const spotify = new SpotifyWebApi
 
 function App() {
